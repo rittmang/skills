@@ -1,0 +1,3 @@
+interface:
+  display_name: "Create a Company Identity"
+  short_description: "Shape a company identity with domains and social handles"
