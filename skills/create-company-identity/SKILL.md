@@ -16,15 +16,25 @@ Ask only for missing information that materially changes the work. If the user h
 
 Live identity research is part of this workflow unless the user asks for ideation only. Use platform and domain preferences already given. If platforms are unspecified, state a small, audience-relevant selection: for example, GitHub and X for a developer tool, or Instagram and TikTok for a consumer brand. Avoid checking every platform by default. Preserve known handle or domain assets and budget constraints.
 
+Establish preferred domain suffixes and budget constraints. If unspecified, state a reasonable suffix assumption, such as starting with `.com` and one category-relevant alternative. Do not imply the user has accepted a premium domain budget.
+
 ## Use the naming component
 
-If the `name-project` skill is available in the current environment, use it with the company brief and the requested domain constraints. Locate it through the environment's skill catalog or an existing sibling skill folder; do not assume the author's machine path. Pass along names already explored so it need not restart the discussion. Request naming directions, a shortlist with rationale, obvious category collisions, and domain findings if needed. Continue with the social and consistency work here.
+If the `name-project` skill is available in the current environment, use it with the company brief and creative naming constraints. Locate it through the environment's skill catalog or an existing sibling skill folder; do not assume the author's machine path. Pass along names already explored so it need not restart the discussion. Request naming directions and a shortlist with rationale. Perform domain, social, and collision research here after receiving that shortlist.
 
-If `name-project` is not installed, continue without installing anything: explore a few distinct naming directions, compare candidates for fit, memorability, pronunciation, and distinctiveness, and shortlist a few. When research is enabled, search obvious category collisions and use registry or registrar lookups for domains. This skill must remain useful when installed alone. For an existing company name, evaluate that name first rather than requiring another naming round.
+If `name-project` is not installed, continue without installing anything: explore a few distinct naming directions, compare candidates for fit, memorability, pronunciation, and distinctiveness, and shortlist a few. Continue with this skill's own identity research workflow and bundled tools. For an existing company name, evaluate that name first rather than requiring another naming round.
 
 ## Research the identity
 
 Skip this section's live checks for ideation-only requests. Otherwise read [references/identity-checks.md](references/identity-checks.md) before researching domains or social handles.
+
+For domain evidence and lookup mechanics, read [references/domain-research.md](references/domain-research.md). With Python 3.10+ and network access, this skill's bundled helper queries IANA-discovered registry RDAP services:
+
+```bash
+python3 <skill-directory>/scripts/check_domains.py candidate.com candidate.dev
+```
+
+Replace `<skill-directory>` with this skill's actual installed directory. The helper uses the Python standard library and returns timestamped JSON. It accepts ASCII second-level domains such as `candidate.com`; use registry or registrar tools for `candidate.co.uk` or Unicode input. Its `not_found` result needs registrar confirmation of registrability and pricing; unsupported services and failed requests stay `unknown`.
 
 For the strongest candidates:
 

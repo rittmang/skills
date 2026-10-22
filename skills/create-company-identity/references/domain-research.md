@@ -1,6 +1,6 @@
 # Domain evidence
 
-Use this reference only when the user requests domain research or a domain constraint is part of the brief.
+Use this reference for the domain research stage of creating a company identity.
 
 ## Check a shortlist
 
@@ -34,7 +34,7 @@ python3 <skill-directory>/scripts/check_domains.py candidate.com candidate.dev
 - Uses a 10-second timeout per request, configurable with `--timeout`. Requests run sequentially, without automatic retries. After a 429, remaining domains on that same service are marked unknown without more requests.
 - Returns JSON with `domain`, `status`, `reason`, `source_url`, `checked_at`, `http_status`, and `detail`. It omits registrant contact data.
 - Exit `0` means all results are either `registered` or `not_found`, not that any domain is available. Exit `1` means at least one result is `unknown`; the JSON is still useful. Exit `2` means invalid arguments.
-- If terminal execution is unavailable, use a browser or an existing lookup tool with the same evidence distinctions. If network access is unavailable, deliver the naming work and label domain checks unperformed.
+- If terminal execution is unavailable, use a browser or an existing lookup tool with the same evidence distinctions. If network access is unavailable, deliver the identity brief and proposed identifiers, and label domain checks unperformed.
 
 ## Source mechanics
 

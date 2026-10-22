@@ -10,7 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 
-SCRIPT = Path(__file__).resolve().parents[1] / "skills/name-project/scripts/check_domains.py"
+SCRIPT = Path(__file__).resolve().parents[1] / "skills/create-company-identity/scripts/check_domains.py"
 SPEC = importlib.util.spec_from_file_location("check_domains", SCRIPT)
 checker = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(checker)

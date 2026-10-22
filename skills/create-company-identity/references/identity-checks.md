@@ -2,13 +2,7 @@
 
 ## Domains
 
-Use authoritative registry RDAP or registrar lookups. When `name-project` is installed, reuse its domain workflow and optional checker. When it is absent, perform the same checks through available browser or lookup tools; this reference is sufficient for standalone use.
-
-- A matching RDAP domain object establishes an existing registration.
-- A structured RDAP 404 means no object was found in that service. Reserved, restricted, and premium names mean this is not proof a domain can be bought.
-- Only describe a domain as available when a registrar explicitly offers registration at check time. Distinguish new registration from an aftermarket listing. Record the displayed price, currency, renewal price, and premium conditions when shown; leave missing fields unknown.
-- No website, no DNS, or no search results proves nothing about registration.
-- Unsupported services, failures, login requirements, and conflicting evidence are `unknown`. Link the evidence and record a UTC timestamp.
+Use this skill's own domain workflow and bundled checker as described in [domain-research.md](domain-research.md), or perform the same checks through available registry, registrar, or browser tools. Domain research is independent of whether `name-project` is installed. Keep registration evidence separate from confirmation that a domain can be purchased, and record sources and UTC check times.
 
 ## Social handles
 

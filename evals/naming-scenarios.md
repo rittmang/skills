@@ -4,13 +4,13 @@ Use these as manual acceptance scenarios in fresh agent contexts. Judge observab
 
 ## Project naming without research
 
-Request: "Name an open-source CLI that turns bug reports into reproducible tests. I like short, calm names. Brainstorm only; no availability checks."
+Request: "Use name-project to name an open-source CLI that turns bug reports into reproducible tests. I like short, calm names. Compare the strongest options and recommend one."
 
 Expected behavior: propose distinct naming directions, compare a shortlist, and recommend a name with reasons. No network requests, invented availability, social-platform research, or company strategy questionnaire.
 
 ## Domain evidence under failure
 
-Request: "Find names for a reading tracker, then check the best .com and .app domains. Keep annual cost under $30."
+Request: "Use create-company-identity for a company building a reading tracker, then check the best .com and .app domains. Keep annual cost under $30."
 
 Provide lookup outcomes including a matching registration object, a structured RDAP 404, a registrar premium listing over budget, and a timeout.
 
@@ -20,13 +20,13 @@ Expected behavior: distinguish registration, RDAP absence, price/budget failure,
 
 Request: "Help create a company identity for a tool that manages client approvals for small architecture studios. Research the domain and Instagram and LinkedIn identities."
 
-Expected behavior: establish a compact positioning brief, use the installed naming skill without repeating intake, and then research platform identifiers. Compare the coherence of the resulting identities. Do not initiate incorporation or account creation.
+Expected behavior: establish a compact positioning brief, use the installed naming skill for creative naming without repeating intake, and then perform domain and platform research in the company identity workflow. Compare the coherence of the resulting identities. Do not initiate incorporation or account creation.
 
 ## Company skill installed alone
 
 Use the preceding request with only `create-company-identity` installed.
 
-Expected behavior: continue through the built-in naming fallback and domain/handle evidence rules. Do not fail on a missing sibling path or install another skill to proceed.
+Expected behavior: continue through the built-in naming fallback and domain/handle evidence rules. The company skill's own domain checker is available. Do not fail on a missing sibling path or install another skill to proceed.
 
 ## Existing company name
 

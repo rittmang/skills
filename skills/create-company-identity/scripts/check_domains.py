@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Query registry RDAP evidence; never equate a missing object with availability."""
+"""Query registry RDAP evidence for company identity, not purchase availability."""
 
 from __future__ import annotations
 

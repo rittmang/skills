@@ -6,10 +6,10 @@ Practical [Agent Skills](https://agentskills.io/) for reusable workflows. Each s
 
 | Skill | What it does |
 | --- | --- |
-| [name-project](skills/name-project/SKILL.md) | Develop and compare project, product, or company names, with optional domain research. |
+| [name-project](skills/name-project/SKILL.md) | Develop and compare project, product, or company names through a focused creative naming workflow. |
 | [create-company-identity](skills/create-company-identity/SKILL.md) | Turn a company idea into positioning, a name, and a coherent domain/social identity with evidence for live checks. |
 
-The company identity skill uses `name-project` when it is installed. Both work independently: the company skill has a naming fallback, and the project skill stays focused on naming and domains. Company identity covers brand setup, not incorporation or account creation.
+The company identity skill uses `name-project` for creative naming when it is installed. Both work independently: the company skill has a naming fallback and owns all domain and social research, including its bundled domain checker. The project skill focuses on naming. Company identity covers brand setup, not incorporation or account creation.
 
 ## Install
 
@@ -33,11 +33,11 @@ The CLI supports other agents as well. You can also copy an individual skill fol
 
 For naming only:
 
-> Use name-project to name an open-source tool that turns bug reports into reproducible test cases. I want a short, memorable name with a calm engineering tone. Brainstorm only; skip domain research.
+> Use name-project to name an open-source tool that turns bug reports into reproducible test cases. I want a short, memorable name with a calm engineering tone. Compare the strongest options and recommend one.
 
-For naming with a domain constraint:
+For a company identity with a domain constraint:
 
-> Use name-project to explore names for a personal reading tracker. Compare the strongest options, then research exact-match .com and .app domains. My budget is $30 per year; don't assume I can buy an aftermarket name.
+> Use create-company-identity for a company building a personal reading tracker. Compare names, then research exact-match .com and .app domains. My budget is $30 per year; don't assume I can buy an aftermarket name.
 
 For a company identity:
 
@@ -51,17 +51,17 @@ In Codex, you can explicitly invoke these as `$name-project` and `$create-compan
 
 ## Availability research
 
-Ideation works without network access. Live domain, handle, and collision research needs browsing or lookup tools. No specific MCP server or paid service is required.
+`name-project` works without network access. Live domain, handle, and collision research belongs to `create-company-identity` and needs browsing or lookup tools. No specific MCP server or paid service is required.
 
-The naming skill includes an optional, standard-library-only RDAP helper requiring Python 3.10+:
+The company identity skill includes an optional, standard-library-only RDAP helper requiring Python 3.10+:
 
 ```bash
-python3 skills/name-project/scripts/check_domains.py example.com example.dev
+python3 skills/create-company-identity/scripts/check_domains.py example.com example.dev
 ```
 
 It queries IANA-discovered registry services and emits timestamped JSON. It accepts ASCII second-level domains such as `example.com`; use registry or registrar tools for multi-label suffixes such as `example.co.uk` and raw Unicode names. Unsupported services and blocked requests stay `unknown`.
 
-`not_found` is an RDAP result, not confirmation that a domain can be purchased. A registrar must confirm registrability and pricing. Likewise, an absent social profile does not prove a handle is claimable. The skills keep these evidence levels explicit and do not purchase domains or register accounts.
+`not_found` is an RDAP result, not confirmation that a domain can be purchased. A registrar must confirm registrability and pricing. Likewise, an absent social profile does not prove a handle is claimable. The company identity skill keeps these evidence levels explicit and does not purchase domains or register accounts.
 
 ## Development and validation
 
